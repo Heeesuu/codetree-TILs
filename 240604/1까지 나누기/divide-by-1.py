@@ -5,6 +5,6 @@ for i in range(1,n+1):
     if a>1:
         n=a
         continue
-    else:.
+    else:
         print(i)
         break

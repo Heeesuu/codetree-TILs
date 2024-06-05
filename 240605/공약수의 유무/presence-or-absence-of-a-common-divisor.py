@@ -7,5 +7,5 @@ for i in range(a, b+1):
         flag = True
         break
 
-if flag:
+if not flag:
     print(0)

@@ -6,5 +6,5 @@ for i in range(a, b+1):
         print(1)
         flag = True
 
-if not flag:
+if flag == "False":
     print(0)

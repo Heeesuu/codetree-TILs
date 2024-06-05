@@ -3,7 +3,7 @@ cnt = 0
 
 while True:
     a = int(input())
-    if a >= 30:
+    if a >= 30 or a < 20:
         break
     else:
         answer += a

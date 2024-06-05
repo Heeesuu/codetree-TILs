@@ -1,9 +1,9 @@
-answer = [0]*5
+answer = []
 
 for i in range(5):
     a = int(input())
     if a % 3 == 0:
-        answer[i] = a
+        answer.append(1)
 
 if len(answer)==5:
     print(1)

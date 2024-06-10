@@ -10,7 +10,8 @@ for i in range(a):
             arr3[i][j] = 1
 
 
-for i in range(a):
-    for j in range(b):
-        print(arr3[i][j], end =' ')
+
+for i in arr3:
+    for j in i:
+        print(j, end=' ')
     print()

@@ -1,12 +1,11 @@
 a = input()
-count =0
+count1 =0
+count2 =0
 
-if "ee" in a:
-    count += 1
-print(count, end=' ')
+for i in range(len(a)-1):
+    if a[i] == "e" and a[i+1]== "e":
+        count1 += 1
+    if a[i] == "e" and a[i+1]== "b":
+        count2 += 1
 
-count = 0
-
-if "eb" in a:
-    count += 1
-print(count)
+print(count1, count2)

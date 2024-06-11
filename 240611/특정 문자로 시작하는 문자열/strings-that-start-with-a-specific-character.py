@@ -15,5 +15,7 @@ for i in answer:
 
 if count ==0:
     print("0 -nan")
+elif length ==0:
+    print("0 -nan")
 else:
     print(f"{count} {length/count:.2f}")

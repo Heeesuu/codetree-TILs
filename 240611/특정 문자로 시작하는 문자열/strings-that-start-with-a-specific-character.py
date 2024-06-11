@@ -12,6 +12,8 @@ for i in answer:
     if b in i:
         count += 1
         length += len(i)
+    else:
+        length +=len(i)
 
 if count ==0:
     print("0 -nan")

@@ -9,11 +9,10 @@ length = 0
 
 b = input()
 for i in answer:
-    if b in i:
+    if i.startswith(b):
         count += 1
         length += len(i)
-    else:
-        length +=len(i)
+
 
 if count ==0:
     print("0 -nan")

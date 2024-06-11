@@ -7,9 +7,9 @@ for i in range(n):
 count = 0
 length = 0
 
-c = input()
+b = input()
 for i in answer:
-    if c in i:
+    if b in i:
         count += 1
         length += len(i)
 

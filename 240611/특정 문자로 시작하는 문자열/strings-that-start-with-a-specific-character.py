@@ -13,4 +13,7 @@ for i in answer:
         count += 1
         length += len(i)
 
-print(f"{count} {length/count:.2f}")
+if count ==0:
+    print("0 -nan")
+else:
+    print(f"{count} {length/count:.2f}")

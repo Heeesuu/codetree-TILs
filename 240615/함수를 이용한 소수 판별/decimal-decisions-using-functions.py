@@ -4,8 +4,11 @@ def isPrime(n):
             return False
     return True
 
-sum = 0
 a, b = map(int, input().split())
+if a == 1:
+    sum = 1
+else:
+    sum = 0
 
 for i in range(a, b+1):
     if isPrime(i):

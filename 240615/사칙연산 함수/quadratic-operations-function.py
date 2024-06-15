@@ -22,6 +22,6 @@ elif b == '-':
 elif b == '*':
     print(a, "*", c, "=", times(a, c))
 elif b == '/':
-    print(a, "/", c, "=", divide(a, c))
+    print(a, "/", c, "=", division(a, c))
 else:
     print("False")

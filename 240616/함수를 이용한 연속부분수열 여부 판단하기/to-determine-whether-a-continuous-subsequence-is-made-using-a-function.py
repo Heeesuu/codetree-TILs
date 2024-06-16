@@ -12,12 +12,15 @@ a, b = map(int, input().split())
 aarr= list(map(int, input().split()))
 barr = list(map(int, input().split()))
 bleng = len(barr)
+flag = False
 
 for i in range(len(aarr)):
     if aarr[i] == barr[0]:
+        flag = True
         if susu(aarr, barr, i, bleng):
             print("Yes")
         else:
             print("No")
-    else:
-        print("No")
+
+if not flag:
+    print("No")

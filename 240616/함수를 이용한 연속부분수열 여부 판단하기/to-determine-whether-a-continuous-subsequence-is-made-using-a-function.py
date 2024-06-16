@@ -23,6 +23,7 @@ for i in range(len(aarr)):
         else:
             print("No")
             flag = True
+            break
 
 if not flag:
     print("No")

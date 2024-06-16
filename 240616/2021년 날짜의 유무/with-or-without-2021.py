@@ -21,12 +21,12 @@ a, b = map(int, input().split())
 
 if a > 12:
     print("No")
-elif a == "2":
+elif a == 2:
     if d28(b):
         print("Yes")
     else:
         print("No")
-elif a == "4" or a == "6" or a == "4" or a == "9" or  a == "11":
+elif a == 4 or a == 6 or a == 4 or a == 9 or  a == 11:
     if d30(b):
         print("Yes")
     else:

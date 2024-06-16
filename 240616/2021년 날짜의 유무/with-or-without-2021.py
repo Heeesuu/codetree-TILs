@@ -19,7 +19,10 @@ def d28(n):
 
 a, b = map(int, input().split())
 
-if a == "2":
+if a > 12 or a < 1:
+    print("No")
+    break
+elif a == "2":
     if d28(b):
         print("Yes")
     else:

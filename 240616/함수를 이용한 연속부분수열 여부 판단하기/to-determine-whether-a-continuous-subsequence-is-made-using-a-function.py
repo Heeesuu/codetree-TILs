@@ -19,11 +19,10 @@ for i in range(len(aarr)):
         if susu(aarr, barr, i, bleng):
             print("Yes")
             flag= True
+            break
         else:
             print("No")
             flag = True
-
-        
 
 if not flag:
     print("No")

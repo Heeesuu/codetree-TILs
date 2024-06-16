@@ -18,9 +18,12 @@ for i in range(len(aarr)):
     if aarr[i] == barr[0]:
         if susu(aarr, barr, i, bleng):
             print("Yes")
-            flag = True
+            flag= True
         else:
             print("No")
+            flag = True
+
+        
 
 if not flag:
     print("No")

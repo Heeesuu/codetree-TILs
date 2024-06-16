@@ -21,9 +21,7 @@ for i in range(len(aarr)):
             flag= True
             break
         else:
-            print("No")
-            flag = True
-            break
+            continue
 
 if not flag:
     print("No")

@@ -16,9 +16,9 @@ flag = False
 
 for i in range(len(aarr)):
     if aarr[i] == barr[0]:
-        flag = True
         if susu(aarr, barr, i, bleng):
             print("Yes")
+            flag = True
         else:
             print("No")
 

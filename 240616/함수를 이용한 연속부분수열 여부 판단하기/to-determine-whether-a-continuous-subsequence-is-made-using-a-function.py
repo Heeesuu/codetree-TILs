@@ -19,3 +19,5 @@ for i in range(len(aarr)):
             print("Yes")
         else:
             print("No")
+    else:
+        print("No")

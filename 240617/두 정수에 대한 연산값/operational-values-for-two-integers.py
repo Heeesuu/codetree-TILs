@@ -1,6 +1,6 @@
 def g(n, m):
     if n > m:
-        return(m*2, n+25)
+        return(n+25, m*2)
     else:
         return(n*2, m+25)
 

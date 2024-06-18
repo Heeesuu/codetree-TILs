@@ -10,7 +10,8 @@ def cal(st):
 
 st = input()
 a = cal(st)
-if a.isdigit():
+
+if a is not False:
     print(a)
 else:
     print("-1")

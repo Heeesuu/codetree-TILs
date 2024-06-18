@@ -1,11 +1,10 @@
 def two(a):
     arr = []
-    brr = [0]*100
     for i in a:
-        arr.append(i)
-        brr[a.index(i)] += 1
-        if 2 in brr:
-            return False
+        if i in arr:
+           return False
+        else:
+            arr.append(i)
     return True
 
 

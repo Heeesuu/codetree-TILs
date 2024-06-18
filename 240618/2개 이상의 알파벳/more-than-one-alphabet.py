@@ -1,13 +1,12 @@
 def two(a):
-    arr = []
+    an = a[0]
     for i in a:
-        if i in arr:
-           return False
+        if i == a[0]:
+            continue
         else:
-            arr.append(i)
+            return False
+        
     return True
-
-
 
 a = input()
 

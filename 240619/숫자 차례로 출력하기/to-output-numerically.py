@@ -1,8 +1,9 @@
-def s(a, n):
-    if a == n+1:
+def s(n):
+    if n == 0:
         return False
-    print(a, end=' ')
-    s(a+1, n)
+    s(n-1)
+    print(n, end=' ')
+    
 
 def t(n):
     if n == 0:
@@ -12,6 +13,6 @@ def t(n):
 
 
 n = int(input())
-s(1, n)
+s(n)
 print()
 t(n)

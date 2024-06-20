@@ -1,19 +1,20 @@
-def gcd(a, b):
-    if b == 0:
-        return a
-    else:
-        return gcd(b, a % b)
+n = int(input())
+arr = [0] + list(map(int, input().split()))
+
 
 def lcm(a, b):
-    return abs(a * b) // gcd(a, b)
+    gcd = 1
+    for i in range(1, min(a, b) + 1):
+        if a % i == 0 and b % i == 0:
+            gcd = i
 
-def lcm_of_array(arr, n):
-    if n == 1:
-        return arr[0]
-    else:
-        return lcm(arr[n-1], lcm_of_array(arr, n-1))
+    return a * b // gcd
 
-n = int(input())
-arr = list(map(int, input().split()))
 
-print(lcm_of_array(arr, n))
+def get_lcm_all(index):
+    if index == 1:
+        return arr[1]
+    return lcm(get_lcm_all(index - 1), arr[index])
+
+   
+print(get_lcm_all(n))

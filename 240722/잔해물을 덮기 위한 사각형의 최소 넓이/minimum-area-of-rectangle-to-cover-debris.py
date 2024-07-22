@@ -1,34 +1,29 @@
-def get_remaining_area(first_rect, second_rect):
-    x1, y1, x2, y2 = first_rect
-    x3, y3, x4, y4 = second_rect
-    
-    # 교차 영역 계산
-    inter_left = max(x1, x3)
-    inter_right = min(x2, x4)
-    inter_bottom = max(y1, y3)
-    inter_top = min(y2, y4)
-    
-    # 교차 영역의 넓이 계산
-    if inter_left < inter_right and inter_bottom < inter_top:
-        inter_area = (inter_right - inter_left) * (inter_top - inter_bottom)
-    else:
-        inter_area = 0  # 교차 영역이 없으면 0
-    
-    # 첫 번째 직사각형의 전체 넓이
-    first_area = (x2 - x1) * (y2 - y1)
-    
-    # 잔여 영역 넓이
-    remaining_area = first_area - inter_area
-    
-    return remaining_area
-
 # 입력 받기
+xx1, yy1, xx2, yy2 = map(int, input().split())
 x1, y1, x2, y2 = map(int, input().split())
-first_rect = (x1, y1, x2, y2)
 
-x3, y3, x4, y4 = map(int, input().split())
-second_rect = (x3, y3, x4, y4)
+# 두 직사각형의 교차 영역 계산
+inter_left = max(xx1, x1)
+inter_right = min(xx2, x2)
+inter_bottom = max(yy1, y1)
+inter_top = min(yy2, y2)
 
-# 남아있는 첫 번째 직사각형의 잔해물을 덮기 위한 최소 직사각형의 넓이 계산
-result = get_remaining_area(first_rect, second_rect)
-print(result)
+# 교차 영역이 있는지 확인
+if inter_left < inter_right and inter_bottom < inter_top:
+    # 교차 영역이 있으면
+    # 첫 번째 직사각형의 잔해물을 덮기 위한 최소 직사각형의 네 꼭짓점 좌표
+    min_x = min(xx1, inter_right)
+    max_x = max(xx2, inter_left)
+    min_y = min(yy1, inter_top)
+    max_y = max(yy2, inter_bottom)
+    
+    # 잔해물을 덮기 위한 최소 직사각형의 넓이 계산
+    remaining_width = max_x - min_x
+    remaining_height = max_y - min_y
+    remaining_area = remaining_width * remaining_height
+    
+    print(remaining_area)
+else:
+    # 교차 영역이 없으면 첫 번째 직사각형의 넓이 반환
+    remaining_area = (xx2 - xx1) * (yy2 - yy1)
+    print(remaining_area)

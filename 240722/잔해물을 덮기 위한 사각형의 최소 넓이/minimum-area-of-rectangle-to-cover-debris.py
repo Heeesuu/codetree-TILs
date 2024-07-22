@@ -22,13 +22,18 @@ for i in range(x1, x2):
 
 xtemp = 0
 ytemp = 0
+count = 0
 
 for i in range(len(arr)):
     for j in range(len(arr[i])):
         if arr[i][j] == 1:
+            count += 1
             if xtemp < i:
                 xtemp = i
             if ytemp < j:
                 ytemp = j
 
-print((xtemp-xx1 +1) * (ytemp-yy1 +1))
+if count > 0:
+    print((xtemp-xx1 +1) * (ytemp-yy1 +1))
+else:
+    print(0)

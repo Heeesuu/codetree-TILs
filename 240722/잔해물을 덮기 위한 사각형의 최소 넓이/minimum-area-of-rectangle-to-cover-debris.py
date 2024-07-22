@@ -31,4 +31,4 @@ for i in range(len(arr)):
             if ytemp < j:
                 ytemp = j
 
-print(abs(xtemp-xx1 +1) * abs(ytemp-yy1 +1))
+print((xtemp-xx1 +1) * (ytemp-yy1 +1))

@@ -10,17 +10,21 @@ inter_top = min(yy2, y2)
 
 # 교차 영역이 있는지 확인
 if inter_left < inter_right and inter_bottom < inter_top:
-    # 교차 영역이 있으면
-    # 첫 번째 직사각형의 잔해물을 덮기 위한 최소 직사각형의 네 꼭짓점 좌표
-    min_x = min(xx1, inter_right)
-    max_x = max(xx2, inter_left)
-    min_y = min(yy1, inter_top)
-    max_y = max(yy2, inter_bottom)
-    
-    # 잔해물을 덮기 위한 최소 직사각형의 넓이 계산
-    remaining_width = max_x - min_x
-    remaining_height = max_y - min_y
-    remaining_area = remaining_width * remaining_height
+    # 첫 번째 직사각형이 두 번째 직사각형에 의해 완전히 덮인 경우
+    if xx1 >= x1 and yy1 >= y1 and xx2 <= x2 and yy2 <= y2:
+        remaining_area = 0
+    else:
+        # 교차 영역이 있으면
+        # 첫 번째 직사각형의 잔해물을 덮기 위한 최소 직사각형의 네 꼭짓점 좌표
+        min_x = min(xx1, inter_right)
+        max_x = max(xx2, inter_left)
+        min_y = min(yy1, inter_top)
+        max_y = max(yy2, inter_bottom)
+        
+        # 잔해물을 덮기 위한 최소 직사각형의 넓이 계산
+        remaining_width = max_x - min_x
+        remaining_height = max_y - min_y
+        remaining_area = remaining_width * remaining_height
     
     print(remaining_area)
 else:

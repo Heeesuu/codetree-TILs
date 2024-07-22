@@ -20,20 +20,18 @@ for i in range(x1, x2):
     for j in range(y1, y2):
         arr[i][j] = 0
 
-xtemp = 0
-ytemp = 0
+arrx = []
+arry = []
 count = 0
 
 for i in range(len(arr)):
     for j in range(len(arr[i])):
         if arr[i][j] == 1:
+            arrx.append(i)
+            arry.append(j)
             count += 1
-            if xtemp < i:
-                xtemp = i
-            if ytemp < j:
-                ytemp = j
 
 if count > 0:
-    print((xtemp-xx1 +1) * (ytemp-yy1 +1))
+    print((max(arrx)-min(arrx)+1) * (max(arry)-min(arry)+1))
 else:
     print(0)

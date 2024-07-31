@@ -10,11 +10,11 @@ count = 1
 answer = []
 
 for i in range(1, a):
-    if arr[i] < arr[i-1]:
+    if arr[i] <= arr[i-1]:
         answer.append(count)
         count =1
     else:
         count += 1
 answer.append(count)
 
-print(max(answer)-1)
+print(max(answer))

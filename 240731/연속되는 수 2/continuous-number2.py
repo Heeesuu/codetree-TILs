@@ -17,4 +17,7 @@ for i in range(le):
     else:
         count += 1
 
-print(max(answer))
+if le < 2:
+    print(1)
+else:
+    print(max(answer))

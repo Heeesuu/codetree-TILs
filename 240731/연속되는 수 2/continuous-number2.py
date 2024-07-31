@@ -11,9 +11,9 @@ count = 0
 
 for i in range(le):
     if i == 0 or arr[i] != arr[i-1]:
-        answer.append(count)
-        count = 0
         count += 1
+        answer.append(count)
+        count = 0        
     else:
         count += 1
 

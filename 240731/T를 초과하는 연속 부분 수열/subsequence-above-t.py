@@ -1,13 +1,11 @@
 a, b = map(int, input().split())
-
 arr = list(map(int, input().split()))
-
 a = len(arr)
 answer = []
 count = 1
 
 for i in range(1, a):
-    if arr[i] > b and arr[i-1] > b and arr[i] > arr[i-1]:
+    if arr[i] > b and arr[i-1] > b:
         count += 1
     else:
         answer.append(count)
@@ -16,7 +14,5 @@ answer.append(count)
 
 if max(answer) == 1:
     print(0)
-elif max(answer) == 2:
-    print(1)
 else:
     print(max(answer))

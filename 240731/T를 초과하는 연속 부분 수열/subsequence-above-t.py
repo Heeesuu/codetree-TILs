@@ -14,7 +14,7 @@ for i in range(1, a):
         count = 1
 answer.append(count)
 
-if max(answer) == 1:
+if max(answer) == 2:
     print(0)
 else:
     print(max(answer))

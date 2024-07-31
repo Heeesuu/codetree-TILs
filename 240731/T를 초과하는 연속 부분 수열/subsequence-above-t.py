@@ -18,5 +18,7 @@ answer.append(count)
 
 if max(answer) == 1:
     print(0)
+elif max(answer) == 2:
+    print(1)
 else:
     print(max(answer))

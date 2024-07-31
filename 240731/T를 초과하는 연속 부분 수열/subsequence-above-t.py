@@ -1,24 +1,14 @@
-a, b = map(int, input().split())
+n, t = map(int, input().split())
 arr = list(map(int, input().split()))
-a = len(arr)
-answer = []
-count = 1
-flag = False
 
-for i in range(a):
-    if arr[i] > b and flag:
-        count += 1
-    elif arr[i] > b:
-        flag = True
+max_length = 0
+current_length = 0
+
+for num in arr:
+    if num > t:
+        current_length += 1
+        max_length = max(max_length, current_length)
     else:
-        answer.append(count)
-        count = 1
-        flag = False
-answer.append(count)
+        current_length = 0
 
-if max(answer) == 1:
-    print(0)
-elif max(answer) == 2:
-    print(1)
-else:
-    print(max(answer))
+print(max_length)
